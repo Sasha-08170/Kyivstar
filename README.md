@@ -30,7 +30,8 @@
 
 ## Превью
 
-![Book preview](https://hub.kyivstar.ua/assets/cms/uploads/small_1_25db32f4c5.jpg)
+<img width="1331" height="620" alt="Screenshot_2025_10_18-1" src="https://github.com/user-attachments/assets/71629091-248c-42ee-b6d5-96d892ee9513" />
+
 
 ---
 
@@ -55,3 +56,4 @@
 * Используется **тёмная тема** с мягкими тенями и плавными переходами
 
 ---
+
