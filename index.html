@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Чинити правильно прямо зараз — Раян Голідей | Огляд книги</title>
+    <meta
+      name="description"
+      content="Огляд книги 'Чинити правильно прямо зараз' автора Раяна Голідея. Читайте короткий опис, слухайте аудіо та залишайте свої коментарі."
+    />
+    <meta
+      name="keywords"
+      content="Чинити правильно прямо зараз, Раян Голідей, огляд книги, філософія стоїцизму, саморозвиток, Kyivstar Hub"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Чинити правильно прямо зараз — Раян Голідей" />
+    <meta
+      property="og:description"
+      content="Книга про моральний вибір і правильні вчинки в сучасному світі. Дізнайтесь більше, слухайте аудіо та діліться враженнями."
+    />
+    <meta
+      property="og:image"
+      content="https://hub.kyivstar.ua/assets/cms/uploads/small_1_25db32f4c5.jpg"
+    />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:url" content="https://yourdomain.com/books/right-thing-right-now" />
+  </head>
+  <body>
+    <section class="book">
+      <nav class="book__breadcrumbs breadcrumbs" aria-label="Breadcrumb">
+        <a href="#" class="breadcrumbs__link">Головна</a>
+        <span class="breadcrumbs__separator">/</span>
+        <a href="#" class="breadcrumbs__link">Огляд книг</a>
+        <span class="breadcrumbs__separator">/</span>
+        <a href="#" class="breadcrumbs__link">Світогляд</a>
+        <span class="breadcrumbs__separator">/</span>
+        <span class="breadcrumbs__current">
+          Чинити правильно прямо зараз
+        </span>
+      </nav>
+
+      <div class="book__header">
+        <figure class="book__cover">
+          <img
+            src="https://hub.kyivstar.ua/assets/cms/uploads/small_1_25db32f4c5.jpg"
+            alt="Right Thing, Right Now — Ryan Holiday"
+          />
+        </figure>
+
+        <div class="book__info">
+          <time class="book__date" datetime="2024-10-06">6 жовтня 2025</time>
+
+          <h1 class="book__title">
+            Чинити правильно прямо зараз
+          </h1>
+
+          <div class="book__meta">
+            <span class="book__category">Світогляд</span>
+            <button
+              class="book__bookmark"
+              aria-label="Додати в закладки"
+            ></button>
+          </div>
+
+          <div class="book__audio audio-player">
+            <audio id="audio" src="audio.mp3" preload="metadata"></audio>
+            <div class="audio-player__controls">
+              <button
+                id="play-btn"
+                class="audio-player__play"
+                aria-label="Відтворити"
+              ></button>
+
+              <div id="timeline" class="audio-player__timeline">
+                <div id="progress" class="audio-player__progress"></div>
+              </div>
+
+              <div class="audio-player__time">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+    <section class="book__comments comments">
+
+      <h2 class="comments__title">Залишити коментар:</h2>
+
+      <form class="comments__form" id="commentForm">
+        <div class="comments__fields">
+          <div class="comments__field-group">
+            <label for="comment-name" class="comments__label visually-hidden">Ваше ім'я</label>
+            <input type="text" id="comment-name" class="comments__input" placeholder="Ваше ім'я:" required />
+          </div>
+          <div class="comments__field-group">
+            <label for="comment-email" class="comments__label visually-hidden">Ваш email</label>
+            <input type="email" id="comment-email" class="comments__input" placeholder="Ваш email:" required />
+          </div>
+        </div>
+        <div class="comments__field-group">
+          <label for="comment-text" class="comments__label visually-hidden">Коментар</label>
+          <textarea id="comment-text" class="comments__textarea" placeholder="Коментар:" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="comments__submit-btn">Надіслати коментар</button>
+      </form>
+
+      <div class="comments__list" id="commentsList">
+        <h3 class="comments__list-title">Коментарі:</h3>
+        <div class="comment">
+          <div class="comment__header">
+            <span class="comment__author">Анна Ковальчук</span>
+            <time class="comment__date" datetime="2025-10-06T14:30">6 жовтня 2025 о 14:30</time>
+          </div>
+          <p class="comment__text">
+            Дуже цікава книга, варто прочитати кожному, хто прагне покращити себе та світ навколо!
+          </p>
+        </div>
+        <div class="comment">
+          <div class="comment__header">
+            <span class="comment__author">Олег Петренко</span>
+            <time class="comment__date" datetime="2025-10-07T09:00">7 жовтня 2025 о 09:00</time>
+          </div>
+          <p class="comment__text">
+            Автор чудово розкриває тему морального вибору. Рекомендую!
+          </p>
+        </div>
+      </div>
+
+    </section>
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("commentForm");
+      const commentsList = document.getElementById("commentsList");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("comment-name").value.trim();
+        const email = document.getElementById("comment-email").value.trim();
+        const text = document.getElementById("comment-text").value.trim();
+
+        if (!name || !email || !text) {
+          alert("Будь ласка, заповніть усі поля.");
+          return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert("Введіть правильний email.");
+          return;
+        }
+
+        const now = new Date();
+        const months = [
+          "січня", "лютого", "березня", "квітня", "травня", "червня",
+          "липня", "серпня", "вересня", "жовтня", "листопада", "грудня"
+        ];
+        const dateStr = `${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()} о ${now.getHours().toString().padStart(2, "0")}:${now.getMinutes().toString().padStart(2, "0")}`;
+
+
+        const comment = document.createElement("div");
+        comment.classList.add("comment");
+
+        comment.innerHTML = `
+          <div class="comment__header">
+            <span class="comment__author">${name}</span>
+            <time class="comment__date" datetime="${now.toISOString()}">${dateStr}</time>
+          </div>
+          <p class="comment__text">${text}</p>
+        `;
+
+        commentsList.appendChild(comment);
+        form.reset();
+      });
+    });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Чинити правильно прямо зараз",
+      "author": {
+        "@type": "Person",
+        "name": "Раян Голідей"
+      },
+      "image": "https://hub.kyivstar.ua/assets/cms/uploads/small_1_25db32f4c5.jpg",
+      "genre": "Світогляд",
+      "datePublished": "2025-10-06",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kyivstar Hub"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Анна Ковальчук" },
+          "datePublished": "2025-10-06T14:30",
+          "reviewBody": "Дуже цікава книга, варто прочитати кожному, хто прагне покращити себе та світ навколо!"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Олег Петренко" },
+          "datePublished": "2025-10-07T09:00",
+          "reviewBody": "Автор чудово розкриває тему морального вибору. Рекомендую!"
+        }
+      ]
+    }
+    </script>
+    <script src="./play.js"></script>
+  </body>
+</html>
